@@ -13,30 +13,45 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Keyboard">
+      <UniqueIdentifier>{bc402024-eea4-4010-8dc5-23adc42110dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exception">
+      <UniqueIdentifier>{aa187a97-9224-4c8d-b25a-3d475cd78adf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Window">
+      <UniqueIdentifier>{76ba51c5-1fbb-4a39-a4ae-6b75fbb8ecb4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Window.cpp">
-      <Filter>來源檔案</Filter>
-    </ClCompile>
     <ClCompile Include="WinMain.cpp">
       <Filter>來源檔案</Filter>
     </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
     <ClCompile Include="ExceptionHelper.cpp">
-      <Filter>來源檔案</Filter>
+      <Filter>Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="Keyboard.cpp">
+      <Filter>Keyboard</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="asdWin.h">
-      <Filter>標頭檔</Filter>
-    </ClInclude>
-    <ClInclude Include="Window.h">
-      <Filter>標頭檔</Filter>
-    </ClInclude>
-    <ClInclude Include="ExceptionHelper.h">
-      <Filter>標頭檔</Filter>
-    </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="Keyboard.h">
+      <Filter>Keyboard</Filter>
+    </ClInclude>
+    <ClInclude Include="ExceptionHelper.h">
+      <Filter>Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="asdWin.h">
+      <Filter>Window</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

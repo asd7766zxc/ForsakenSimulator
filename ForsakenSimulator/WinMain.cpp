@@ -14,6 +14,10 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 	{
 		TranslateMessage(&msg);
 		DispatchMessage(&msg);
+		if (wnd.kb.KeyIsPressed(VK_MENU))
+		{
+			MessageBox(nullptr, "SpaceBar", "BReAAA", MB_OK | MB_ICONEXCLAMATION);
+		}
 	}
 	if (gResult == -1)
 	{

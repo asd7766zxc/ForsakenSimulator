@@ -135,12 +135,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ExceptionHelper.cpp" />
+    <ClCompile Include="Keyboard.cpp" />
     <ClCompile Include="Window.cpp" />
     <ClCompile Include="WinMain.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="asdWin.h" />
     <ClInclude Include="ExceptionHelper.h" />
+    <ClInclude Include="Keyboard.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>

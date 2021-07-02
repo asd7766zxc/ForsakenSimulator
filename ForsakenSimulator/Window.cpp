@@ -82,7 +82,27 @@ LRESULT Window::HandleMsg(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) noe
 	case WM_CLOSE:
 		PostQuitMessage(0);
 		return 0;
-	}
+	//clear keys when window loss focus
+	case WM_KILLFOCUS:
+		kb.ClearState();
+		break;
+
+	/*Handle Keyboard*/
+	case WM_KEYDOWN:
+	case WM_SYSKEYDOWN: //SYS Key handle
+		if(!(lParam & 0x40000000 || kb.AutoRepeatIsEnabled()))
+		{ 
+			kb.OnKeyPressed(static_cast<unsigned char>(wParam));
+		}
+		break;
+	case WM_KEYUP:
+	case WM_SYSKEYUP:
+		kb.OnKeyReleased(static_cast<unsigned char>(wParam));
+		break;
+	case WM_CHAR:
+		kb.OnChar(static_cast<unsigned char>(wParam));
+		break;
+	}/*Handle Keyboard*/
 	return DefWindowProc(hWnd, msg, wParam, lParam);
 
 }

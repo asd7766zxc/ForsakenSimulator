@@ -22,6 +22,9 @@
     <Filter Include="Window">
       <UniqueIdentifier>{76ba51c5-1fbb-4a39-a4ae-6b75fbb8ecb4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Mouse">
+      <UniqueIdentifier>{a8ad0896-8e26-4d25-9ede-66cf1ef772ee}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
@@ -35,6 +38,9 @@
     </ClCompile>
     <ClCompile Include="Keyboard.cpp">
       <Filter>Keyboard</Filter>
+    </ClCompile>
+    <ClCompile Include="Mouse.cpp">
+      <Filter>Mouse</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -52,6 +58,9 @@
     </ClInclude>
     <ClInclude Include="asdWin.h">
       <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Mouse.h">
+      <Filter>Mouse</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

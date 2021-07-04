@@ -16,14 +16,17 @@
     <Filter Include="Keyboard">
       <UniqueIdentifier>{bc402024-eea4-4010-8dc5-23adc42110dd}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Exception">
-      <UniqueIdentifier>{aa187a97-9224-4c8d-b25a-3d475cd78adf}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Window">
       <UniqueIdentifier>{76ba51c5-1fbb-4a39-a4ae-6b75fbb8ecb4}</UniqueIdentifier>
     </Filter>
     <Filter Include="Mouse">
       <UniqueIdentifier>{a8ad0896-8e26-4d25-9ede-66cf1ef772ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{8f158197-1043-4d40-a1a3-0366502b8f80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{aa187a97-9224-4c8d-b25a-3d475cd78adf}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -34,13 +37,19 @@
       <Filter>Window</Filter>
     </ClCompile>
     <ClCompile Include="ExceptionHelper.cpp">
-      <Filter>Exception</Filter>
+      <Filter>Helpers</Filter>
     </ClCompile>
     <ClCompile Include="Keyboard.cpp">
       <Filter>Keyboard</Filter>
     </ClCompile>
     <ClCompile Include="Mouse.cpp">
       <Filter>Mouse</Filter>
+    </ClCompile>
+    <ClCompile Include="App.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Helpers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -51,7 +60,7 @@
       <Filter>Keyboard</Filter>
     </ClInclude>
     <ClInclude Include="ExceptionHelper.h">
-      <Filter>Exception</Filter>
+      <Filter>Helpers</Filter>
     </ClInclude>
     <ClInclude Include="Window.h">
       <Filter>Window</Filter>
@@ -61,6 +70,12 @@
     </ClInclude>
     <ClInclude Include="Mouse.h">
       <Filter>Mouse</Filter>
+    </ClInclude>
+    <ClInclude Include="App.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Helpers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

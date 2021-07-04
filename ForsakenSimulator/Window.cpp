@@ -40,7 +40,7 @@ Window::Window(int width, int height, const char* name) :width(width),height(hei
 	wr.bottom = height + wr.top;
 	if (AdjustWindowRect(&wr, WS_CAPTION | WS_MINIMIZEBOX | WS_SYSMENU, FALSE) == 0) //由於視窗的長寬會受到視窗工具列的影響 因此需要做調整
 	{
-		throw CHWND_LAST_EXCEPT();
+		throw AWND_LAST_EXCEPT();
 	}
 	
 
@@ -48,7 +48,7 @@ Window::Window(int width, int height, const char* name) :width(width),height(hei
 
 	if (hWnd == nullptr)
 	{
-		throw CHWND_LAST_EXCEPT();
+		throw AWND_LAST_EXCEPT();
 	}
 	ShowWindow(hWnd,SW_SHOWDEFAULT);
 }
@@ -60,9 +60,27 @@ void Window::SetTitle(const std::string& title)
 {
 	if (SetWindowText(hWnd, title.c_str()) == 0)
 	{
-		throw CHWND_LAST_EXCEPT();
+		throw AWND_LAST_EXCEPT();
 	}
 }
+std::optional<int> Window::ProcessMessge() noexcept
+{
+	//msg pump
+	MSG msg;
+	//while queue has messages ,remove them and diapatch them (without bllock )
+	while (PeekMessage(&msg,nullptr,0,0,PM_REMOVE))
+	{
+		if (msg.message == WM_QUIT)
+		{
+			return msg.wParam;
+		}
+		//process msg ususally 
+		TranslateMessage(&msg);
+		DispatchMessage(&msg);
+	}
+	return {};
+}
+
 LRESULT WINAPI Window::HandleMsgSetup(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) noexcept
 {
 	if (msg == WM_NCCREATE)
